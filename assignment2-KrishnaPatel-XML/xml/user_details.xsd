@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="users">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="user" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<!--user name-->
+							<xs:element name="user_name">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="user_fname" type="xs:string" />
+										<xs:element name="user_lname" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<!--user email-->
+							<xs:element name="user_email" type="email" />
+							<!--user id-->
+							<xs:element name="user_id" type="xs:string" />
+							<!--user password-->
+							<xs:element name="user_password" type="xs:string" />
+							<!--complaint subject-->
+							<xs:element name="complaint_subject" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							<!--complaint detail-->
+							<xs:element name="details" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+
+						<xs:attribute name="type" type="type"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!---->
+	<xs:simpleType name="type">
+	    <xs:restriction base="xs:string">
+	      <xs:enumeration value="customer" />
+	      <xs:enumeration value="admin" />
+	    </xs:restriction>
+  	</xs:simpleType>
+
+  	<!--reference:: https://github.com/metashare/META-SHARE/issues/527-->
+  	<xs:simpleType name="email">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

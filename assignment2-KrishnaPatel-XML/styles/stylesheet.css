@@ -1,0 +1,49 @@
+body {
+    font-family:calibri;
+    
+}
+
+.container-fluid{
+    width: 1200px;
+    display: flex;
+}
+
+header, footer{
+    color: white;
+    margin: 10px 0;
+    height: 120px;
+    background-color: grey;
+}
+
+header img{
+    margin: 10px;
+    width: 100%;
+    max-width: 40%;
+    height: auto;
+}
+
+.login{
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.align-center{
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    margin: auto;
+}
+
+.logout-btn{
+    float: right;
+}
+
+.chatbox{
+    border: 1px solid black;
+    width: 100%;
+    padding: 15px;
+    margin: auto;
+    
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="user_details.xsl" ?>
+<users>
+	<!--user 1-->
+	<user type="customer">
+		<!--user details-->
+		<user_name>
+			<user_fname>Marcell</user_fname>
+			<user_lname>Geller</user_lname>
+		</user_name>
+		<user_email>mrcl@gmail.com</user_email>
+		<user_id>mg</user_id>
+		<user_password>mg_pwd</user_password>
+		<!--user's complaint subject & details-->
+		<complaint_subject>Not happy with the product</complaint_subject>
+	</user>
+	<user type="customer">
+		<!--user details-->
+		<user_name>
+			<user_fname>krsna</user_fname>
+			<user_lname>patel</user_lname>
+		</user_name>
+		<user_email>k@gmail.com</user_email>
+		<user_id>k</user_id>
+		<user_password>123</user_password>
+		<!--user's complaint subject & details-->
+		<complaint_subject>check this complaint</complaint_subject>
+	</user>
+	<!--user 2-->
+	<user type="admin">
+		<!--user details-->
+		<user_name>
+			<user_fname>Rachel</user_fname>
+			<user_lname>Green</user_lname>
+		</user_name>
+		<!--user's complaint subject & details-->
+		<user_email>rachelgreen@gmail.com</user_email>
+		<user_id>admin</user_id>
+		<user_password>123</user_password>
+	</user>
+</users>
