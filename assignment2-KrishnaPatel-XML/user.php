@@ -3,6 +3,7 @@
 session_start();
 /*fetch the same user who loged in*/
 	$user_id = $_SESSION['user_id'];
+	var_dump($user_id);
 	$user_tkts = [];
 
 	/*loading tickets xml file*/
@@ -48,20 +49,21 @@ session_start();
 			    </tr>
 			</thead>
 			<tbody>
-			    <tr>
+			    
 			    	
 			    <?php
 			    /*list of tickets of that user*/
                     for($t=0; $t<sizeof($user_tkts); $t++){
-                        echo('<th class="row">
+                        echo('<tr>
+
                                 <td> '.($t+1).' </td>
                                 <td> '.$user_tkts[$t]['dt'].' </td>
-                                <td> <a href="display_tkt.php?id='.$user_tkt[$t]['id'].'">'.$user_tkts[$t]->complaint.'</a> </td>
+                                <td> <a href="display_ticket.php?id='.$user_tkts[$t]['id'].'">'.$user_tkts[$t]->complaint.'</a> </td>
                                 <td> '.$user_tkts[$t]->ticket_status.' </td>
-                            </th>');
+                            </tr>');
                     }
                 ?>
-			    </tr>
+			    
 			</tbody>
 		</table>
 	</main>

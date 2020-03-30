@@ -41,9 +41,20 @@ header img{
 }
 
 .chatbox{
+
     border: 1px solid black;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     margin: auto;
     
+}
+
+.tags-right{
+    float: right;
+    font-weight: bold; 
+}
+
+.tags-left{
+    font-weight: bold; 
+    float: left;
 }

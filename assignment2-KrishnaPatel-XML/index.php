@@ -11,11 +11,11 @@
 		$username = $_POST['uname'];
 		$password = $_POST['pwd'];
 		foreach($xml->user as $user){
-			var_dump($user->user_id);
+			
     			if($user->user_id == $username && $user->user_password == $password) {
     				//one more if to check whether the $user['type']=='customer' is a client or a customer
     				session_start();
-    				
+    				$_SESSION['user_id'] = (string)$user->user_id;
 		        	if($user['type']=='customer'){
 		        		header("Location:user.php");
 		        	}

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    //set loged in user in session
+    //set logged in user in session
     $user_id = $_SESSION['user_id'];
     //load ticket_details.xml file
     $tkts = simplexml_load_file("xml/ticket_details.xml");

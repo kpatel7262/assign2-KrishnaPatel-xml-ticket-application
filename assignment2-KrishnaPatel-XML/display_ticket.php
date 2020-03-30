@@ -1,5 +1,5 @@
 <?php
-session_start();
+	session_start();
     
     $user_id = $_SESSION['user_id'];
     //load ticket_details.xml file
@@ -16,7 +16,7 @@ session_start();
            $tkt_userid = $tkts->ticket[$t]['user_id'];
            $tkt_complaint = $tkts->ticket[$t]->complaint; 
            $tkt_status = $tkts->ticket[$t]->ticket_status;
-           $tkt_msg = $tkts->ticket[$t]->reply;
+           $tkt_msgs = $tkts->ticket[$t]->reply;
         }
     }
 
@@ -55,38 +55,27 @@ session_start();
 
 		<h3>Ticket Details</h3>
 		<form class="form-group" name="login_form" method="post">
-				<div class="chatbox col-md-8">
+				<div class="chatbox col-md-12">
 					<div>
 	                    <?php
-	                        foreach($tkt_msg as $tkt_msg){
-	                            if($tkt_msg['sender']==$user_id){
+	                        foreach($tkt_msgs as $tkt_msg){
+	                            
 	                                echo('
-	                                <div>
-	                                    <div>You:</div>
-	                                    <div>'.$tkt_msg.'</div>
-	                                </div>
-	                            ');
-	                            }
-	                            else{
-	                                echo('
-	                                <div>
-	                                    <div>User: '.$tkt_msg['sender'].'</div>
-	                                    <div>'.$tkt_msg.'</div>
-	                                </div>
-	                            '); 
-	                            }
+	                                <div class="tags-left"> Message : '.$tkt_msg.'</div>
+	                                <br/>
+	                            	');
+	                            	
 	                            
 	                        }
 	                    ?>
 	                </div>
-					<div>
-			            <div>User Id:<?= $tkt_userid?></div>
-			            <div>Status:<?= $tkt_status?></div>
-			        </div>
-					<input type="text" name="msg-detail" placeholder="Enter your complaint">
+
+					<input type="text" name="msg_detail" placeholder="Enter your complaint">
 		            <input type="submit" name="send_msg" class="submit-button" value="Send">
-		           
+					
 				</div>
+				<div class="tags-left">User Id:<?= $tkt_userid?></div>
+			        <div class="tags-right">Status:<?= $tkt_status?></div>		           
 
 		</form>
 	</main>

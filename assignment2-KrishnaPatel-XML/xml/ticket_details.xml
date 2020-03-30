@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<tickets xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ticket_details.xsd">
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ticket_details.xsd">
 	<!--ticket 1-->
 	<ticket id="1" user_id="mg" dt="2020-02-16T05:50:06">
 		<!--status of ticket ongoing or solved-->
 		<ticket_status>on-going</ticket_status>
 		<complaint>product not working well</complaint>
 		<reply>Will look into it</reply>
-	</ticket>
+	<reply sender="mg"/><reply sender="mg"/><reply sender="mg"/><reply sender="mg">2121</reply><reply sender="admin">hjh</reply><reply sender="admin">klklkl</reply></ticket>
 	<ticket id="2" user_id="mg" dt="2020-03-25T11:10:25">
 		<!--status of ticket ongoing or solved-->
 		<ticket_status>solved</ticket_status>
